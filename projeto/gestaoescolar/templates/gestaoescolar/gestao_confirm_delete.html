@@ -1,0 +1,8 @@
+<h1> EXCLUIR TAREFA<h1/>
+    <p> Deseja Excluir a tarefa {{ gestao.disciplina}}? </p>
+    <form method= "POST">
+        {% csrf_token %}
+
+        <button tipe = "submit" class= "btn btn-danger">Excluir </button>
+    </form> 
+       

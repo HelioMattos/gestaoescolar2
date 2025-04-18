@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Disciplinas</title>
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+</head>
+<body>
+
+    <h1>DISCIPLINAS CADASTRADAS</h1> 
+
+    <ul>
+        {% for gestao in gestao_list %}
+        <li>
+            <span>{{ gestao.disciplina }}</span>
+            <div class="acoes">
+                <a href="{% url 'gestao_update' gestao.pk %}">Editar</a>
+                <a href="{% url 'gestao_delete' gestao.pk %}">Excluir</a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul> 
+
+    <a href="{% url 'gestao_create' %}" class="nova-tarefa">NOVA DISCIPLINA</a>
+
+</body>
+</html>
