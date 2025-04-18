@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Criar Tarefa</title>
-    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gestao_form.css' %}">
 </head>
 <body>
 
@@ -17,10 +17,11 @@
             {{ form }}
         </div>
    
-        <button type="submit" class="btn-salvar">Salvar</button>
+        <div class="form-botoes">
+            <button type="submit" class="btn-salvar">Salvar</button>
+            <a href="{% url 'gestao_list' %}" class="btn-cancelar">Cancelar</a>
+        </div>
     </form>
-
-    <a href="{% url 'gestao_list' %}" class="btn-cancelar">Cancelar</a>
 
 </body>
 </html>
