@@ -3,6 +3,8 @@
     <form method= "POST">
         {% csrf_token %}
 
-        <button tipe = "submit" class= "btn btn-danger">Excluir </button>
+        <button tipe = "submit" class= "btn btn-danger">SIM </button>
+        <a href="{% url 'gestao_list' %}" class="btn btn-voltar">NÃO</a>
     </form> 
+    
        
