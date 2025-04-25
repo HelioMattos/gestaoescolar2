@@ -5,6 +5,53 @@ body {
     color: #333;
 }
 
+/* Menu bar */
+.menu-bar {
+    background-color: #491e1e;
+    padding: 1rem 2rem;
+    margin: -2rem -2rem 2rem -2rem; /* compensa a margem do body */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.menu-bar li a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+/* Efeito underline animado */
+.menu-bar li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #2ecc71;
+    transition: width 0.3s ease;
+}
+
+.menu-bar li a:hover::after {
+    width: 100%;
+}
+
+.menu-bar li a:hover {
+    color: #2ecc71;
+}
+
 h1 {
     text-align: center;
     margin-bottom: 2rem;
@@ -47,7 +94,12 @@ ul {
     padding: 0.4rem 0.8rem;
     border-radius: 5px;
     font-size: 0.9rem;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.acoes a:hover {
+    transform: scale(1.05);
 }
 
 /* Estilo dos botões */
@@ -67,6 +119,7 @@ ul {
     background-color: #ee6666;
 }
 
+/* Botão "Nova Disciplina" */
 .nova-tarefa {
     display: block;
     width: fit-content;

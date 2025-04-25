@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="{% static 'css/gestao_form.css' %}">
 </head>
 <body>
+     <!-- Menu de navegação -->
+     <nav class="menu-bar">
+        <ul>
+            <li><a href="{% url 'gestao_list' %}">Disciplinas</a></li>
+            <li><a href="{% url 'gestao_create' %}">Nova Disciplina</a></li>
+        </ul>
+    </nav>
+    
 
     {% if form.instance.pk %}
         <h1>EDITAR DISCIPLINA</h1>
