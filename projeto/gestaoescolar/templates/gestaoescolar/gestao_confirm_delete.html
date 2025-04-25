@@ -11,7 +11,7 @@
     <body>
 
         <h1>Excluir Tarefa</h1>
-        <p> Deseja Excluir a tarefa {{ gestao.disciplina}}? </p>
+        <p> Deseja Excluir a Disciplina {{ gestao.disciplina}}? </p>
 
         <form method="POST" class="form-tarefa">
             {% csrf_token %}
@@ -22,7 +22,7 @@
     
             <div class="form-botoes">
                 <button type="submit" class="btn-sim">SIM</button>
-                <a href="{% url 'gestao_list' %}" class="btn-cancelar">Cancelar</a>
+                <a href="{% url 'gestao_list' %}" class="btn-cancelar">NÃO</a>
             </div>
         </form>
 

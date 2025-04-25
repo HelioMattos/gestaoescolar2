@@ -27,7 +27,7 @@
                 <span class="nome">{{ gestao.disciplina }}</span>
                 <div class="acoes">
                     <a href="{% url 'gestao_update' gestao.pk %}">✏️ Editar</a>
-                    <a href="{% url 'gestao_delete' gestao.pk %}" onclick="return confirm('Tem certeza que deseja excluir esta disciplina?')">🗑️ Excluir</a>
+                    <a href="{% url 'gestao_delete' gestao.pk %}">🗑️ Excluir</a>
                 </div>
             </div>
         </li>

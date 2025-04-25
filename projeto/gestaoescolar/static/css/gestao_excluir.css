@@ -49,7 +49,7 @@ p {
 /* Botão de salvar (confirma exclusão) */
 .btn-sim {
     padding: 0.6rem 1.4rem;
-    background-color: #d63031;
+    background-color: #027c49;
     color: white;
     font-weight: bold;
     border: none;
@@ -59,13 +59,13 @@ p {
 }
 
 .btn-sim:hover {
-    background-color: #a00000;
+    background-color: #bcdb0c;
 }
 
 /* Botão de cancelar (voltar) */
 .btn-cancelar {
     padding: 0.6rem 1.4rem;
-    background-color: #7f8c8d;
+    background-color: #ad110b;
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -74,5 +74,5 @@ p {
 }
 
 .btn-cancelar:hover {
-    background-color: #4d5c5d;
+    background-color: #cf800a;
 }
