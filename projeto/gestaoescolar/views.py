@@ -10,17 +10,16 @@ class GestaoListView(ListView):
 
 class GestaoCreateView(CreateView):
     model = Gestao
-    fields = ['disciplina']
+    fields = ['disciplina', 'carga_horaria']
     success_url = reverse_lazy('gestao_list')
 
 class GestaoUpdateview(UpdateView):
     model = Gestao
-    fields = ['disciplina']
+    fields = ['disciplina', 'carga_horaria']
     success_url = reverse_lazy('gestao_list')
 
 class GestaoDeleteView(DeleteView):
     model = Gestao
-    fields = ['disciplina']
     success_url = reverse_lazy('gestao_list')
     
 

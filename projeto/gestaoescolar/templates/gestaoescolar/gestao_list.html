@@ -24,7 +24,7 @@
         {% for gestao in gestao_list %}
         <li class="disciplina-item">
             <div class="conteudo">
-                <span class="nome">{{ gestao.disciplina }}</span>
+                <span class="nome">{{ gestao.disciplina }} {{ gestao.carga_horaria }}</span>
                 <div class="acoes">
                     <a href="{% url 'gestao_update' gestao.pk %}">✏️ Editar</a>
                     <a href="{% url 'gestao_delete' gestao.pk %}">🗑️ Excluir</a>
