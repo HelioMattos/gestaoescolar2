@@ -14,20 +14,32 @@
     <nav class="menu-bar">
         <ul>
             <li><a href="{% url 'gestao_list' %}">Disciplinas</a></li>
-            <li><a href="{% url 'gestao_create' %}">Nova Disciplina</a></li>
         </ul>
     </nav>
 
     <h1>DISCIPLINAS CADASTRADAS</h1> 
 
+    <!-- Cabeçalho com rótulos -->
+    <div class="cabecalho-lista">
+        <span class="cab-disciplina">Disciplina</span>
+        <span class="cab-carga">Carga Horária</span>
+    </div>
+
     <ul>
         {% for gestao in gestao_list %}
         <li class="disciplina-item">
             <div class="conteudo">
-                <span class="nome">{{ gestao.disciplina }} {{ gestao.carga_horaria }}</span>
+                <div class="info">
+                    <div class="campo">
+                        <span class="nome">{{ gestao.disciplina }}</span>
+                    </div>
+                    <div class="campo centro">
+                        <span class="nome">{{ gestao.carga_horaria }}</span>
+                    </div>
+                </div>
                 <div class="acoes">
                     <a href="{% url 'gestao_update' gestao.pk %}">✏️ Editar</a>
-                    <a href="{% url 'gestao_delete' gestao.pk %}">🗑️ Excluir</a>
+                    <a href="{% url 'gestao_delete' gestao.pk %}" onclick="return confirm('Tem certeza que deseja excluir esta disciplina?')">🗑️ Excluir</a>
                 </div>
             </div>
         </li>
@@ -40,5 +52,3 @@
 
 </body>
 </html>
-
-
