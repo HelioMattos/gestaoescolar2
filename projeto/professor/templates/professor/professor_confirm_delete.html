@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Excluir Professor</title>
+</head>
+<body>
+    <h1>Excluir Professor</h1>
+    <p>Tem certeza de que deseja excluir o professor <strong>{{ object.nome }}</strong>?</p>
+    
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Sim, excluir</button>
+        <a href="{% url 'professor_list' %}">Cancelar</a>
+    </form>
+</body>
+</html>

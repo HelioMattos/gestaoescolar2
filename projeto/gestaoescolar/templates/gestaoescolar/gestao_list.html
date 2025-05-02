@@ -14,6 +14,7 @@
     <nav class="menu-bar">
         <ul>
             <li><a href="{% url 'gestao_list' %}">Disciplinas</a></li>
+            <li><a href="{% url 'professor_list' %}">Professores</a></li>
         </ul>
     </nav>
 
@@ -23,6 +24,7 @@
     <div class="cabecalho-lista">
         <span class="cab-disciplina">Disciplina</span>
         <span class="cab-carga">Carga Horária</span>
+        <span class="cab-professor">Professor</span> <!-- Novo campo para o professor -->
     </div>
 
     <ul>
@@ -35,6 +37,9 @@
                     </div>
                     <div class="campo centro">
                         <span class="nome">{{ gestao.carga_horaria }}</span>
+                    </div>
+                    <div class="campo centro">
+                        <span class="nome">{{ gestao.professor.nome }}</span> <!-- Exibindo o nome do professor -->
                     </div>
                 </div>
                 <div class="acoes">
