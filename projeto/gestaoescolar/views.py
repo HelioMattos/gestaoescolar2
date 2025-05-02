@@ -21,9 +21,9 @@ class GestaoUpdateview(UpdateView):
     success_url = reverse_lazy('gestao_list')
     template_name = 'gestaoescolar/gestao_form.html'
 
+
+    
 class GestaoDeleteView(DeleteView):
     model = Gestao
     success_url = reverse_lazy('gestao_list')
-    template_name = 'gestaoescolar/gestao_form.html'
-    
-
+    template_name = 'gestaoescolar/gestao_confirm_delete.html'

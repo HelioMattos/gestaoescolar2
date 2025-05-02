@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Lista de Professores</title>
-    <link rel="stylesheet" href="{% static 'css/gestao_list.css' %}">
+    <link rel="stylesheet" href="{% static 'css/professor_list.css' %}">
 </head>
 <body>
 
-    <!-- Menu de navegação -->
+    <!-- Menu de navegação -->  
     <nav class="menu-bar">
         <ul>
             <li><a href="{% url 'gestao_list' %}">Disciplinas</a></li>
@@ -19,20 +19,20 @@
     <h1>PROFESSORES CADASTRADOS</h1>
 
     <!-- Cabeçalho -->
-    <div class="cabecalho-lista">
+    <div class="cabecalho-lista2">
         <span class="cab-nome">Nome</span>
         <span class="cab-telefone">Telefone</span>
         <span class="cab-disciplina">Disciplina</span>
     </div>
 
     <ul>
-        {% for professor in object_list %}
-        <li class="disciplina-item">
+        {% for professor in object_list %}  
+        <li class="disciplina-item2">
             <div class="conteudo">
                 <div class="info">
-                    <div class="campo"><span class="nome">{{ professor.nome }}</span></div>
-                    <div class="campo centro"><span class="nome">{{ professor.telefone }}</span></div>
-                    <div class="campo centro"><span class="nome">{{ professor.disciplina.disciplina }}</span></div>
+                    <div class="campo_nome"><span class="nome">{{ professor.nome }}</span></div>
+                    <div class="campo-telefone"><span class="nome">{{ professor.telefone }}</span></div>
+                    <div class="campo-disciplina"><span class="nome">{{ professor.disciplina.disciplina }}</span></div>
                 </div>
                 <div class="acoes">
                     <a href="{% url 'professor_update' professor.pk %}">✏️ Editar</a>
